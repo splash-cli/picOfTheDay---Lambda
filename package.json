@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --inspect server.js",
+    "test": "ava"
+  },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1"
   },
