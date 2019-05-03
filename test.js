@@ -1,11 +1,11 @@
 import test from "ava";
 import { scraper } from "./lib/utils";
 
-test("Testing", async (t) => {
+test("Testing: Photo of the day", async (t) => {
 	try {
-		const { user } = await scraper(false);
-		t.log(`Photo of the day by ${user.username}`);
-		t.pass();
+		const { id } = await scraper(false);
+		t.log(`Photo of the day: ${id}`);
+		t.truthy(id);
 	} catch (error) {
 		t.fail(error.message);
 	}
